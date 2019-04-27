@@ -10,6 +10,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score
 
 df = pd.read_csv('C:/Users/joann/Documents/CS491 Machine Learning/shark/YouTubeConcatWhaleShark_20190317.arff',skiprows=6)
 print(df.columns)
@@ -26,3 +27,4 @@ clf.fit(X_train,y_train)
 clf.score(X_test,y_test)
 y_pred = clf.predict(X_test)
 print(classification_report(y_test, y_pred))
+print(accuracy_score(y_test, y_pred))
