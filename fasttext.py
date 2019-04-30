@@ -20,9 +20,11 @@ from youtubepred_preprocessing import process
 
 
 def print_results(N, p, r):
+    
     print("N\t" + str(N))
     print("P@{}\t{:.3f}".format(1, p))
     print("R@{}\t{:.3f}".format(1, r))
+    return N,p,r
     
 #df = pd.read_csv('C:/Users/joann/Documents/CS491 Machine Learning/shark/YouTubeConcatWhaleShark_20190317.arff',skiprows=6)
 df = process()
@@ -47,7 +49,12 @@ for each in data:
 test_output.close()
 train_output.close()  
 
-classifier = fastText.train_supervised('fasttext_train.txt', epoch=20,wordNgrams=3)
+classifier = fastText.train_supervised('fasttext_train.txt', epoch=25,wordNgrams=2, lr = .05)
+#predict = classifier.predict('fasttext_test.txt')
+#print(*predict)
 result = classifier.test('fasttext_test.txt')
-print_results(*result)
+print(*result)
+N,p,r = print_results(*result)
+fmeasure = 2*(p*r/(p+r))
+print(fmeasure)
 
