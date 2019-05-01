@@ -12,7 +12,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 
 #skipping rows that don't contain data
-df = pd.read_csv('C:/Users/joann/Documents/CS491 Machine Learning/shark/YouTubeConcatWhaleShark_20190317.arff',skiprows=6)
+df = pd.read_csv('./YouTubeConcatWhaleShark_20190317.arff',skiprows=6)
 
 X = df['text'] #fetching text column
 y = df['label'] #fetching labels 

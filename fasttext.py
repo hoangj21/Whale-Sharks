@@ -19,7 +19,7 @@ def print_results(N, p, r):
     return N,p,r
 
 #for if we want to use the smaller concat dataset    
-#df = pd.read_csv('C:/Users/joann/Documents/CS491 Machine Learning/shark/YouTubeConcatWhaleShark_20190317.arff',skiprows=6)
+#df = pd.read_csv('./YouTubeConcatWhaleShark_20190317.arff',skiprows=6)
 
 df = process() #preprocess data 
 

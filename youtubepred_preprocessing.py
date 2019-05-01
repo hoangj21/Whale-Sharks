@@ -8,7 +8,7 @@ Created on Sat Apr 27 14:32:07 2019
 import pandas as pd
 import re
 def process():
-    df = pd.read_csv('C:/Users/joann/Documents/CS491 Machine Learning/shark/YouTubePredictor_20190319.arff',skiprows=8,sep="]',",engine='python')
+    df = pd.read_csv('./YouTubePredictor_20190319.arff',skiprows=8,sep="]',",engine='python')
     for i in range(len(df['text'])):
         df.at[i,'text'] = df.at[i,'text'].replace('\\',"")
         df.at[i,'text'] = df.at[i,'text'].replace('\'',"")
