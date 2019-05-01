@@ -1,6 +1,7 @@
 # Is That a Whale Shark?
 ### CS 491 Intro to Machine Learning final project- classifying youtube videos by using natural language processing on youtube titles/tags/descriptions to determine whether or not a video is about whale sharks 
 #### By Joanna Hoang and Joshua Azicate
+https://github.com/hoangj21/Whale-Sharks
 
 Note: original data not included in repo for privacy of original data owners                                              
 ## For our code to run properly, the following modifications must be made in the original datasets:
