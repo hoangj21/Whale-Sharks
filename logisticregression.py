@@ -1,6 +1,3 @@
-import matplotlib
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 
 from sklearn.feature_extraction.text import CountVectorizer
@@ -11,13 +8,12 @@ from sklearn.metrics import classification_report
 
 
 df = pd.read_csv('./YouTubeConcatWhaleShark_20190317.arff',skiprows=6)
-#print(df.head)
 
 # not much preprocessing going on
 X = df.text
 y = df.label
 cv = CountVectorizer()
-X = cv.fit_transform(X) # Fit the Data
+X = cv.fit_transform(X) #fitting data
 
 # try to get a model that gives us an accuracy of higher than 78%
 for i in range(100):
